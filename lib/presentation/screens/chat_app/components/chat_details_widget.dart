@@ -5,7 +5,10 @@ import 'package:lyabs_dev/utils/my_material.dart';
 
 class ChatDetailsWidget extends StatelessWidget {
 
-  const ChatDetailsWidget({Key? key}) : super(key: key);
+  final bool chatSelected;
+  final void Function()? onBack;
+
+  const ChatDetailsWidget({Key? key, this.chatSelected = false, this.onBack}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,19 +22,36 @@ class ChatDetailsWidget extends StatelessWidget {
           fit: BoxFit.cover,
         )
       ),
-      child: Column(
+      child: (!chatSelected)?
+      Center(
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.r),
+            color: colorBlack.withOpacity(0.3),
+          ),
+          padding: const EdgeInsets.all(paddingSmall),
+          child: const Text(
+            'Aucune conversation sélectionnée',
+            style: TextStyle(
+              color: colorWhite,
+            ),
+          ),
+        ),
+      ):
+      Column(
         children: [
           AppBar(
             backgroundColor: colorWhite,
             elevation: 0,
-            leading: InkWell(
-              child: Icon(
-                Icons.arrow_back,
-                color: colorBlack.withOpacity(0.3),
+            leading: Visibility(
+              visible: SizeConfig.isMobile,
+              child: InkWell(
+                onTap: onBack,
+                child: Icon(
+                  Icons.arrow_back,
+                  color: colorBlack.withOpacity(0.3),
+                ),
               ),
-              onTap: () {
-
-              },
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
