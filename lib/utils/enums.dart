@@ -43,3 +43,8 @@ enum NotificationType {
   }
 
 }
+
+enum ChatType {
+  sent,
+  received,
+}

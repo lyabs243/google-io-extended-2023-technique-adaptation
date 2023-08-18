@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:lyabs_dev/data/models/message_item.dart';
 import 'package:lyabs_dev/presentation/components/app_edit_text.dart';
-import 'package:lyabs_dev/utils/constants.dart';
+import 'package:lyabs_dev/presentation/screens/chat_app/components/message_widget.dart';
 import 'package:lyabs_dev/utils/my_material.dart';
 
 class ChatDetailsWidget extends StatelessWidget {
@@ -9,6 +9,9 @@ class ChatDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    List<MessageItem> messages = MessageItem.randomMessages();
+
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -51,7 +54,14 @@ class ChatDetailsWidget extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Container(),
+            child: ListView.builder(
+              itemCount: messages.length,
+              padding: const EdgeInsets.all(10),
+              reverse: true,
+              itemBuilder: (BuildContext context, int index) {
+                return MessageWidget(message: messages[index]);
+              }
+            ),
           ),
           AppEditText(
             'Ecrivez votre message',
