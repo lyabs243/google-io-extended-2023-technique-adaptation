@@ -57,6 +57,16 @@ class HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, pageAspectRatio);
               },
             ),
+            SizedBox(height: 0.01.sh,),
+            ListTile(
+              title: const Text(
+                'Expanded'
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                Navigator.pushNamed(context, pageExpanded);
+              },
+            ),
           ],
         ),
       ),
