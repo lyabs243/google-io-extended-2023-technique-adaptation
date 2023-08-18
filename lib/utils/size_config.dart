@@ -1,40 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:lyabs_dev/utils/my_material.dart';
 
-class SizeConfig extends StatelessWidget {
-  final Widget mobile;
-  final Widget? tablet;
-  final Widget desktop;
+class SizeConfig {
 
-  const SizeConfig({
-    Key? key,
-    required this.mobile,
-    this.tablet,
-    required this.desktop,
-  }) : super(key: key);
+  static bool get isMobile => 1.sw < 650;
 
+  static bool get isTablet => 1.sw < 1100 && 1.sw >= 650;
 
-  static bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width < 650;
+  static bool get isDesktop => 1.sw >= 1100;
 
-  static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width < 1100 && MediaQuery.of(context).size.width >= 650;
-
-  static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1100;
-
-  @override
-  Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-    if (size.width >= 1008) {
-      return desktop;
-    }
-    else if (size.width >= 600 && tablet != null) {
-      return tablet!;
-    }
-    else {
-      return mobile;
-    }
-  }
 }
 
 

@@ -1,5 +1,6 @@
 import 'package:lyabs_dev/presentation/router/no_animation_route.dart';
 import 'package:lyabs_dev/presentation/screens/aspect_ratio_test/aspect_ratio_test.dart';
+import 'package:lyabs_dev/presentation/screens/chat_app/chat_app.dart';
 import 'package:lyabs_dev/presentation/screens/expended_test/expanded_test.dart';
 import 'package:lyabs_dev/presentation/screens/layout_builder_test/layout_builder_test.dart';
 import 'package:lyabs_dev/presentation/screens/media_query_test/media_query_test.dart';
@@ -30,6 +31,9 @@ class AppRouter {
         break;
       case pageExpanded:
         page = const ExpandedTest();
+        break;
+      case pageChatApp:
+        page = const ChatApp();
         break;
       default:
     }

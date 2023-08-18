@@ -1,6 +1,7 @@
 class PathImage{
   static String logo = "assets/images/logo.jpg";
   static String notFound = "assets/images/not_found.png";
+  static String chatBackground = "assets/images/chat_background.jpg";
 }
 
 class PathIcons{

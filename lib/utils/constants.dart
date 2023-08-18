@@ -11,6 +11,7 @@ const pageLayoutBuilder = '/layout_builder';
 const pageMediaQuery = '/media_query';
 const pageAspectRatio = '/aspect_ratio';
 const pageExpanded = '/expanded';
+const pageChatApp = '/chat_app';
 
 const fieldStatusCode = 'status_code';
 
