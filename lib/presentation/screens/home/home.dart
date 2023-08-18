@@ -29,8 +29,11 @@ class HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 0.01.sh,),
             ListTile(
-              title: const Text(
-                'LayoutBuilder'
+              title: Text(
+                'LayoutBuilder',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                ),
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
@@ -39,8 +42,11 @@ class HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 0.01.sh,),
             ListTile(
-              title: const Text(
-                'MediaQuery'
+              title: Text(
+                'MediaQuery',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                ),
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
@@ -49,8 +55,11 @@ class HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 0.01.sh,),
             ListTile(
-              title: const Text(
-                'AspectRatio'
+              title: Text(
+                'AspectRatio',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                ),
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
@@ -59,8 +68,11 @@ class HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 0.01.sh,),
             ListTile(
-              title: const Text(
-                'Expanded'
+              title: Text(
+                'Expanded',
+                style: TextStyle(
+                  fontSize: 14.sp,
+                ),
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
