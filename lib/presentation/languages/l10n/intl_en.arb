@@ -16,5 +16,8 @@
   "no": "No",
   "yes": "Yes",
   "noResultFound": "No result found!",
-  "empty":"Empty"
+  "empty":"Empty",
+  "simpleScreen": "Simple Screen",
+  "responsive": "Responsive",
+  "noResponsive": "No Responsive"
 }

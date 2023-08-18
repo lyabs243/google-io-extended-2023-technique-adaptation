@@ -1,5 +1,3 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lyabs_dev/logic/cubits/app_cubit.dart';
 import '../../../utils/my_material.dart';
 
 
@@ -17,33 +15,27 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return PageContainer(
       child: Scaffold(
-        appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle)),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle), centerTitle: true,),
+        body: ListView(
           children: [
-            const SizedBox(height: 16),
-            AppButton(
-              text: 'Set Theme',
-              onPressed: () {
-                context.read<SettingsCubit>().toggleDarkMode();
-              },
-              context: context,
+            ListTile(
+              title: Text(
+                '${AppLocalizations.of(context)!.simpleScreen} [${AppLocalizations.of(context)!.noResponsive}]'
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () {
+              }
             ),
-            const SizedBox(height: 16),
-            AppButton(
-                text: 'Show Confirm Dialog',
-                onPressed: () {
-                  AppDialog.showConfirmDialog(context, 'Do you like this app?')
-                      .then((value) => debugPrint('========> User\'s answer: $value'));
-                },
-                context: context),
-            const SizedBox(height: 16),
-            AppButton(
-                text: 'Show Dialog',
-                onPressed: () {
-                  context.read<AppCubit>().testShowDialog();
-                },
-                context: context),
+            SizedBox(height: 0.01.sh,),
+            ListTile(
+              title: Text(
+                '${AppLocalizations.of(context)!.simpleScreen} [${AppLocalizations.of(context)!.responsive}]'
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () {
+
+              },
+            ),
           ],
         ),
       ),
