@@ -1,4 +1,5 @@
 import 'package:lyabs_dev/presentation/router/no_animation_route.dart';
+import 'package:lyabs_dev/presentation/screens/aspect_ratio_test/aspect_ratio_test.dart';
 import 'package:lyabs_dev/presentation/screens/layout_builder_test/layout_builder_test.dart';
 import 'package:lyabs_dev/presentation/screens/media_query_test/media_query_test.dart';
 import 'package:lyabs_dev/presentation/screens/simple_screen_no_responsive/simple_screen_no_responsive.dart';
@@ -22,6 +23,9 @@ class AppRouter {
         break;
       case pageMediaQuery:
         page = const MediaQueryTest();
+        break;
+      case pageAspectRatio:
+        page = const AspectRatioTest();
         break;
       default:
     }
