@@ -33,6 +33,7 @@ dependencies:
   test: ^1.21.1
   flutter_screenutil: ^5.6.1
   lottie: ^2.3.1
+  popover: ^0.2.8+2
 
 dev_dependencies:
   flutter_test:

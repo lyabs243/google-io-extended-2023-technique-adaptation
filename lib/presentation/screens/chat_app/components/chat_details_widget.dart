@@ -1,7 +1,9 @@
 import 'package:lyabs_dev/data/models/message_item.dart';
 import 'package:lyabs_dev/presentation/components/app_edit_text.dart';
+import 'package:lyabs_dev/presentation/screens/chat_app/components/chat_emoji_widget.dart';
 import 'package:lyabs_dev/presentation/screens/chat_app/components/message_widget.dart';
 import 'package:lyabs_dev/utils/my_material.dart';
+import 'package:popover/popover.dart';
 
 class ChatDetailsWidget extends StatelessWidget {
 
@@ -90,14 +92,22 @@ class ChatDetailsWidget extends StatelessWidget {
             suffixIcon: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                InkWell(
-                  onTap: () {
-
-                  },
-                  child: const SizedBox(
-                    child: Icon(
-                      Icons.emoji_emotions,
-                    ),
+                Visibility(
+                  visible: !SizeConfig.isDesktop,
+                  child: EmojiButton(
+                    onPressed: (context) {
+                      showPopover(
+                        context: context,
+                        bodyBuilder: (context) {
+                          return const ChatEmojiWidget();
+                        },
+                        direction: PopoverDirection.top,
+                        backgroundColor: colorWhite,
+                        radius: 20,
+                        width: 0.4.sw,
+                        height: 0.5.sh,
+                      );
+                    },
                   ),
                 ),
                 const SizedBox(
@@ -120,6 +130,30 @@ class ChatDetailsWidget extends StatelessWidget {
         ],
       ),
     );
+  }
+
+}
+
+class EmojiButton extends StatelessWidget {
+
+  final Function(BuildContext context) onPressed;
+
+  const EmojiButton({Key? key, required this.onPressed}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    return InkWell(
+      child: const SizedBox(
+        child: Icon(
+          Icons.emoji_emotions,
+        ),
+      ),
+      onTap: () {
+        onPressed(context);
+      },
+    );
+
   }
 
 }
