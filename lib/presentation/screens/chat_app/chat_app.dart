@@ -16,9 +16,13 @@ class ChatApp extends StatelessWidget {
           color: colorWhite,
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
                 flex: 2,
-                child: ChatRoomWidget(),
+                child: ChatRoomWidget(
+                  onSelect: (index) {
+
+                  },
+                ),
               ),
               Visibility(
                 visible: !SizeConfig.isMobile,
