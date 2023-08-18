@@ -24,18 +24,10 @@ class HomePageState extends State<HomePage> {
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-              }
-            ),
-            SizedBox(height: 0.01.sh,),
-            ListTile(
-              title: Text(
-                '${AppLocalizations.of(context)!.simpleScreen} [${AppLocalizations.of(context)!.responsive}]'
-              ),
-              trailing: const Icon(Icons.arrow_forward_ios),
-              onTap: () {
-
+                Navigator.pushNamed(context, pageSimpleScreenNoResponsive);
               },
             ),
+            SizedBox(height: 0.01.sh,),
           ],
         ),
       ),

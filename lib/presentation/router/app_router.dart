@@ -1,4 +1,5 @@
 import 'package:lyabs_dev/presentation/router/no_animation_route.dart';
+import 'package:lyabs_dev/presentation/screens/simple_screen_no_responsive/simple_screen_no_responsive.dart';
 import 'package:lyabs_dev/utils/my_material.dart';
 
 class AppRouter {
@@ -10,6 +11,9 @@ class AppRouter {
     switch (settings.name) {
       case pageHome:
         page = const HomePage();
+        break;
+      case pageSimpleScreenNoResponsive:
+        page = const SimpleScreenNoResponsive();
         break;
       default:
     }

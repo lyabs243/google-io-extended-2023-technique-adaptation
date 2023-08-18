@@ -6,6 +6,7 @@ const supportedLanguages = ['en'];
 /// PAGES
 const pageHome = '/';
 const pageNotification = '/notification';
+const pageSimpleScreenNoResponsive = '/simple_screen_no_responsive';
 
 const fieldStatusCode = 'status_code';
 
@@ -25,8 +26,11 @@ const settingLanguage = 'language';
 const int colorHex = 0XFF538FF7;
 
 const Color colorPrimary = Color(colorHex);
-const Color colorBlack = Color(0XFF130B07);
+const Color colorBlack = Color(0XFF121215);
 const Color colorWhite = Color(0XFFFFFFFF);
+const Color colorYellow = Color(0XFFF6BD41);
+const Color colorGreen = Color(0XFF65B867);
+const Color colorRed = Color(0XFFEC5E4F);
 const Color colorError = Color(0XFF969696);
 
 /// PADDING
