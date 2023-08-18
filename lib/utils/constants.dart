@@ -8,6 +8,7 @@ const pageHome = '/';
 const pageNotification = '/notification';
 const pageSimpleScreenNoResponsive = '/simple_screen_no_responsive';
 const pageLayoutBuilder = '/layout_builder';
+const pageMediaQuery = '/media_query';
 
 const fieldStatusCode = 'status_code';
 

@@ -37,6 +37,16 @@ class HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, pageLayoutBuilder);
               },
             ),
+            SizedBox(height: 0.01.sh,),
+            ListTile(
+              title: const Text(
+                'MediaQuery'
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                Navigator.pushNamed(context, pageMediaQuery);
+              },
+            ),
           ],
         ),
       ),
