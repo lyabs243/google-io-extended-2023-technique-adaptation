@@ -1,0 +1,20 @@
+{
+  "@@locale": "en",
+  "appTitle": "Google I/O L'Shi 2023",
+  "errorOccurred": "Error Occurred",
+  "somethingWentWrong": "Something went wrong",
+  "warning": "Warning",
+  "error": "Error",
+  "success": "Success",
+  "info_": "Info",
+  "confirm": "Confirm",
+  "tryAgain": "Try Again",
+  "done": "Done",
+  "ok": "Ok",
+  "view": "View",
+  "loading": "Loading",
+  "no": "No",
+  "yes": "Yes",
+  "noResultFound": "No result found!",
+  "empty":"Empty"
+}
