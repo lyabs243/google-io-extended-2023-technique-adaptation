@@ -16,40 +16,42 @@ class AppEditText extends StatelessWidget {
   final Widget? prefixIcon;
   final List<TextInputFormatter>? inputFormatters;
   final TextAlign? textAlign;
-  final int maxLines;
+  final int? maxLines, minLines, maxLength;
   final FocusNode? focusNode;
   final bool enabled;
 
   const AppEditText(this.hintText, this.controller,
       {
-        super.key,
+        Key? key,
         this.isPassword = false,
-      this.inputType = TextInputType.text,
-      this.width,
+        this.inputType = TextInputType.text,
+        this.width,
         this.height,
-      this.backgroundColor,
+        this.backgroundColor,
         this.onChanged,
-      this.borderRadius = 0.0,
+        this.borderRadius = 0.0,
         this.autofocus = false,
         this.inputFormatters,
-      this.cursorColor,
-      this.padding,
-      this.contentPadding = const EdgeInsets.only(left: 10),
-      this.suffixIcon,
-      this.border = InputBorder.none,
-      this.enabledBorder = InputBorder.none,
-      this.focusedBorder = InputBorder.none,
-      this.hintStyle,
-      this.labelStyle,
-      this.style,
-      this.labelText,
-      this.prefixIcon,
-      this.textAlign = TextAlign.start,
-      this.color = Colors.grey,
-      this.maxLines = 1,
-      this.showCursor = true,
-      this.focusNode,
-      this.enabled = true});
+        this.cursorColor,
+        this.padding,
+        this.contentPadding = const EdgeInsets.only(left: 10),
+        this.suffixIcon,
+        this.border = InputBorder.none,
+        this.enabledBorder = InputBorder.none,
+        this.focusedBorder = InputBorder.none,
+        this.hintStyle,
+        this.labelStyle,
+        this.style,
+        this.labelText,
+        this.prefixIcon,
+        this.textAlign = TextAlign.start,
+        this.color = Colors.grey,
+        this.maxLines = 1,
+        this.minLines = 1,
+        this.showCursor = true,
+        this.focusNode,
+        this.maxLength,
+        this.enabled = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,20 +73,21 @@ class AppEditText extends StatelessWidget {
         inputFormatters: inputFormatters,
         maxLines: maxLines,
         autofocus: autofocus,
-        minLines: 1,
+        minLines: minLines,
         cursorColor: cursorColor,
         style: style,
         textAlign: textAlign!,
         enabled: enabled,
-
+        maxLength: maxLength,
         decoration: InputDecoration(
-          contentPadding: contentPadding,
+          //contentPadding: contentPadding,
           hintText: hintText,
           hintStyle: hintStyle,
           labelText: labelText,
           labelStyle: labelStyle,
           border: border,
           suffixIcon: suffixIcon,
+          prefixIcon: prefixIcon,
           enabledBorder: enabledBorder,
           focusedBorder: focusedBorder,
         ),
